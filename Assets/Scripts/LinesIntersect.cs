@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -88,7 +89,9 @@ public class LinesIntersect : MonoBehaviour {
 				polygonCol.points = vectorArray;
 				polygonCol.isTrigger = true;
 
-				//TODO: Check who's in the collider and delete polygon collider
+				//TODO: Check who's in the collider
+
+				Destroy (polygonCol);
 			}
 		}
 	}
