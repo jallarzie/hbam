@@ -12,7 +12,7 @@ public class GridFilling : MonoBehaviour {
 	
 	}
 
-	void AddTile(){
+	void AddTile(Nucleo nucleo){
 		
 	
 	}

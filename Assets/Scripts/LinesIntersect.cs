@@ -10,6 +10,8 @@ public class LinesIntersect : MonoBehaviour {
 	public List<Vector3> pointsList;
 	private Vector3 mousePos;
 
+	private int boundaryLayer;
+
 	struct myLine
 	{
 		public Vector3 StartPoint;
@@ -21,6 +23,7 @@ public class LinesIntersect : MonoBehaviour {
 		line.SetVertexCount (0);  
 		isMousePressed = false;
 		pointsList = new List<Vector3> ();
+		boundaryLayer = LayerMask.NameToLayer ("Boundaries");
 	}
 	
 	void Update ()
@@ -68,6 +71,11 @@ public class LinesIntersect : MonoBehaviour {
 	private void Draw(Vector3 position){
 		mousePos = Camera.main.ScreenToWorldPoint (position);
 		mousePos.z = 0;
+
+		if (Physics2D.OverlapPoint (mousePos, boundaryLayer)) {
+			
+		
+		}
 		//TODO: TO OPTIMIZE
 		if (!pointsList.Contains (mousePos)) {
 			pointsList.Add (mousePos);
