@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -15,7 +16,6 @@ public class LinesIntersect : MonoBehaviour {
 		public Vector3 EndPoint;
 	};
 
-	// Use this for initialization
 	void Awake() {
 		line = GetComponent<LineRenderer>();
 		line.SetVertexCount (0);  
@@ -55,7 +55,6 @@ public class LinesIntersect : MonoBehaviour {
 			if (isMousePressed) {
 				Draw (Input.mousePosition);
 			}
-
 		}
 	}
 
@@ -74,9 +73,25 @@ public class LinesIntersect : MonoBehaviour {
 			pointsList.Add (mousePos);
 			line.SetVertexCount (pointsList.Count);
 			line.SetPosition (pointsList.Count - 1, (Vector3)pointsList [pointsList.Count - 1]);
-			if (isLineCollide ()) {
+			int indexVector = 0;
+			if (isLineCollide (out indexVector)) {
 				isMousePressed = false;
 				line.SetColors (Color.red, Color.red);
+
+				//Making Polygon for colliders
+				Vector2[] vectorArray = new Vector2[pointsList.Count-1];
+				for (int i = 0; i < pointsList.Count-1; i++){
+					if (i > indexVector) {
+						vectorArray [i] = (Vector2)pointsList [i];
+					}
+				}
+				PolygonCollider2D polygonCol = gameObject.AddComponent<PolygonCollider2D>();
+				polygonCol.points = vectorArray;
+				polygonCol.isTrigger = true;
+
+				//TODO: Check who's in the collider
+
+				Destroy (polygonCol);
 			}
 		}
 	}
@@ -84,8 +99,9 @@ public class LinesIntersect : MonoBehaviour {
 	//    -----------------------------------    
 	// Following method checks is currentLine(line drawn by last two points) collided with line
 	//    -----------------------------------    
-	private bool isLineCollide ()
+	private bool isLineCollide (out int index)
 	{
+		index = 0;
 		if (pointsList.Count < 3) {
 			return false;
 		}
@@ -101,8 +117,10 @@ public class LinesIntersect : MonoBehaviour {
 			myLine currentLine;
 			currentLine.StartPoint = (Vector3)pointsList [pointsList.Count - 2];
 			currentLine.EndPoint = (Vector3)pointsList [pointsList.Count - 1];
-			if (isLinesIntersect (lines [i], currentLine))
+			if (isLinesIntersect (lines [i], currentLine)) {
+				index = i;
 				return true;
+			}
 		}
 		return false;
 	}
