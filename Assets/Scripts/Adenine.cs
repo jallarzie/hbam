@@ -1,25 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Adenine : Blob {
-    
-    private float stopTime;
-    private float walkTime;
-    private bool walking;
-
-    private Direction currentDirection;
-    private Vector2 walkVector;
-
-    private Direction[] possibleDirections = new Direction[] {
-        Direction.Up,
-        Direction.UpRight,
-        Direction.Right,
-        Direction.DownRight,
-        Direction.Down,
-        Direction.DownLeft,
-        Direction.Left,
-        Direction.UpLeft
-    };
+public class Adenine : Nucleo {
 
     protected override void ProcessMovement(float interval)
     {

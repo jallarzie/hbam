@@ -13,10 +13,33 @@ public enum Direction
     UpLeft
 }
 
-public abstract class Blob : MonoBehaviour {
+public enum NucleoType
+{
+    Ademine,
+    Cytosine,
+    Guanine,
+    Thymine
+}
+
+public abstract class Nucleo : MonoBehaviour {
+
+    [SerializeField]
+    public NucleoType _nucleoType;
 
     [SerializeField]
     protected float baseWalkSpeed;
+
+    [SerializeField]
+    protected Direction[] possibleDirections;
+
+    protected float stopTime;
+    protected float walkTime;
+    protected bool walking;
+
+    protected Direction currentDirection;
+    protected Vector2 walkVector;
+
+    public NucleoType nucleoType { get { return nucleoType; } }
 
     protected abstract void ProcessMovement(float interval);
 

@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Thymine : Blob {
+public class Thymine : Nucleo {
     
     protected override void ProcessMovement(float interval)
     {
-        throw new System.NotImplementedException();
     }
 }
