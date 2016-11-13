@@ -22,8 +22,11 @@ public enum NucleoType
 
 public abstract class Nucleo : MonoBehaviour {
 
-    protected const float kMaxWalkTime = 2f;
-    protected const float kMaxStopTime = 2f;
+    [SerializeField]
+    protected float kMaxWalkTime = 2f;
+
+    [SerializeField]
+    protected float kMaxStopTime = 2f;
 
     [SerializeField]
     public NucleoType _nucleoType;
