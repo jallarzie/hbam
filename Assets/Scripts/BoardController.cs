@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BoardController : MonoBehaviour {
 
@@ -29,7 +30,17 @@ public class BoardController : MonoBehaviour {
     [SerializeField]
     private GameObject _helix;
     [SerializeField]
+    private GameObject _endPopup;
+    [SerializeField]
+    private Text _endText;
+    [SerializeField]
+    private Text _endInstructionText;
+    [SerializeField]
+    private GameObject _lineController;
+    [SerializeField]
     private float _fillTime = 1.5f;
+    [SerializeField]
+    private Text _matchPercentDisplay;
 
     private List<Nucleo> _nucleos = new List<Nucleo>();
     private int currentFillIndex;
@@ -44,6 +55,7 @@ public class BoardController : MonoBehaviour {
         currentFillIndex = 1;
         maxFills = _helix.transform.childCount - 2;
         maxMatches = maxFills * 2;
+        _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
     }
 
     public int nucleoCount
@@ -140,8 +152,18 @@ public class BoardController : MonoBehaviour {
 
         if (matchCount < 5)
         {
+            HelixSegmentView previousSegment = _helix.transform.GetChild(currentFillIndex).GetComponent<HelixSegmentView>();
             currentFillIndex++;
-            StartCoroutine(DoFillHelix(_helix.transform.GetChild(currentFillIndex).GetComponent<Image>()));
+            HelixSegmentView currentSegment = _helix.transform.GetChild(currentFillIndex).GetComponent<HelixSegmentView>();
+            if (matchedCG)
+            {
+                previousSegment.cg.CrossFadeAlpha(1f, _fillTime, false);
+            }
+            if (matchedAT)
+            {
+                previousSegment.at.CrossFadeAlpha(1f, _fillTime, false);
+            }
+            StartCoroutine(DoFillHelix(currentSegment, matchedCG, matchedAT));
 
             if (matchCount == 4)
             {
@@ -151,7 +173,8 @@ public class BoardController : MonoBehaviour {
                     matchedGuanine.Match();
                     matchedAdenine.Match();
                     matchedThymine.Match();
-                    currentMatches++;
+                    currentMatches += 2;
+                    _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
                     return true;
                 }
             }
@@ -160,6 +183,7 @@ public class BoardController : MonoBehaviour {
                 matchedCytosine.Match();
                 matchedGuanine.Match();
                 currentMatches++;
+                _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
                 return true;
             }
 
@@ -168,6 +192,7 @@ public class BoardController : MonoBehaviour {
                 matchedAdenine.Match();
                 matchedThymine.Match();
                 currentMatches++;
+                _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
                 return true;
             }
         }
@@ -175,23 +200,53 @@ public class BoardController : MonoBehaviour {
         return false;
     }
 
-    private IEnumerator DoFillHelix(Image helixSegment)
+    private IEnumerator DoFillHelix(HelixSegmentView helixSegment, bool matchedCG, bool matchedAT)
     {
-        helixSegment.fillAmount = 0f;
+        helixSegment.background.fillAmount = 0f;
 
-        while (helixSegment.fillAmount < 1f)
+        while (helixSegment.background.fillAmount < 1f)
         {
-            helixSegment.fillAmount += (Time.deltaTime / _fillTime);
+            helixSegment.background.fillAmount += (Time.deltaTime / _fillTime);
             yield return null;
         }
 
-        helixSegment.fillAmount = 1f;
+        helixSegment.background.fillAmount = 1f;
 
         if (currentFillIndex > maxFills)
         {
-            Time.timeScale = 0f;
-            Debug.Log(((float)currentMatches / (float)maxMatches * 100f) + "%");
+            for (int i = 0; i < _nucleos.Count; i++)
+            {
+                _nucleos[i].gameObject.SetActive(false);
+                _lineController.SetActive(false);
+                float result = Mathf.Round((float)currentMatches / (float)maxMatches * 100f);
+                if (result > 90f)
+                {
+                    _endText.text = "YOU MADE A BABY!";
+                    _endInstructionText.text = "Tap/click to try again";
+                }
+                else if (result > 60f)
+                {
+                    _endText.text = "EXCELLENT!";
+                    _endInstructionText.text = "Tap/click to try again";
+                }
+                else if (result > 40f)
+                {
+                    _endText.text = "GOOD!";
+                    _endInstructionText.text = "Tap/click to try again";
+                }
+                else
+                {
+                    _endText.text = "...";
+                    _endInstructionText.text = "Tap/click to try again";
+                }
+                _endPopup.SetActive(true);
+            }
         }
+    }
+
+    public void OnEndTap()
+    {
+        SceneManager.LoadScene("scene_main", LoadSceneMode.Single);
     }
 
 

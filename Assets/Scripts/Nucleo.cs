@@ -71,11 +71,7 @@ public abstract class Nucleo : MonoBehaviour {
     public void Match()
     {
         animator.SetTrigger("reactTrigger");
-    }
-
-    public void Cooldown(float duration)
-    {
-        cooldown = duration;
+        cooldown = 1.7f;
     }
 
     public static Vector2 DirectionToVector(Direction direction)

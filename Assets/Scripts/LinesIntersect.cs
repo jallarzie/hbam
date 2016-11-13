@@ -135,7 +135,6 @@ public class LinesIntersect : MonoBehaviour {
             {
                 selectedNucleos.Add(nucleo);
             }
-            nucleo.Cooldown(selectionCooldown);
         }
 
         if (BoardController.instance.ProcessMatch(selectedNucleos))
