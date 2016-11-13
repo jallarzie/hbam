@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: b0d282f10327e3249aaa91debe279e5a
+timeCreated: 1478992652
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: A_I00
+    21300002: A_I01
+    21300004: A_I02
+    21300006: A_I03
+    21300008: A_I04
+    21300010: A_I05
+    21300012: A_I06
+    21300014: A_I07
+    21300016: A_I08
+    21300018: A_I09
+    21300020: A_I10
+    21300022: A_I11
+    21300024: A_I12
+    21300026: A_I13
+    21300028: A_I14
+    21300030: A_I15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A_I00
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1666
+        width: 495
+        height: 381
+      alignment: 9
+      pivot: {x: 0.4989899, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I01
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1670
+        width: 495
+        height: 377
+      alignment: 9
+      pivot: {x: 0.4989899, y: 0.50530505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I02
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1301
+        width: 493
+        height: 367
+      alignment: 9
+      pivot: {x: 0.4969574, y: 0.51907355}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I03
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1687
+        width: 496
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52916664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I04
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 946
+        width: 486
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53966004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I05
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1030
+        width: 489
+        height: 347
+      alignment: 9
+      pivot: {x: 0.5030675, y: 0.53746396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I06
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 1379
+        width: 495
+        height: 326
+      alignment: 9
+      pivot: {x: 0.5010101, y: 0.5720859}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I07
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 1707
+        width: 495
+        height: 340
+      alignment: 9
+      pivot: {x: 0.5010101, y: 0.54264706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I08
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 608
+        width: 484
+        height: 347
+      alignment: 9
+      pivot: {x: 0.49586776, y: 0.53746396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I09
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 615
+        width: 486
+        height: 342
+      alignment: 9
+      pivot: {x: 0.4979424, y: 0.54532164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I10
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 957
+        width: 486
+        height: 342
+      alignment: 9
+      pivot: {x: 0.4979424, y: 0.54532164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 959
+        width: 493
+        height: 343
+      alignment: 9
+      pivot: {x: 0.5030426, y: 0.54373175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I12
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 596
+        width: 481
+        height: 348
+      alignment: 9
+      pivot: {x: 0.49064448, y: 0.53591955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I13
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 675
+        width: 485
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5010309, y: 0.53966004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I14
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1301
+        width: 493
+        height: 363
+      alignment: 9
+      pivot: {x: 0.4969574, y: 0.5247934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: A_I15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1304
+        width: 495
+        height: 381
+      alignment: 9
+      pivot: {x: 0.4989899, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
