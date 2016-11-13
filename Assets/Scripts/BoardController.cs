@@ -46,6 +46,7 @@ public class BoardController : MonoBehaviour {
     [SerializeField]
     private AudioClip _endSound;
 
+	private const float _endSoundVolume = 0.3f;
 
     private List<Nucleo> _nucleos = new List<Nucleo>();
     private int currentFillIndex;
@@ -226,6 +227,7 @@ public class BoardController : MonoBehaviour {
                 _nucleos[i].gameObject.SetActive(false);
                 _lineController.SetActive(false);
                 float result = Mathf.Round((float)currentMatches / (float)maxMatches * 100f);
+				audioSource.volume = _endSoundVolume;
                 if (result > 90f)
                 {
                     _endText.text = "YOU MADE A BABY!";
