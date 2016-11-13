@@ -10,6 +10,7 @@ tpsheetFileNames:
 - Assets/Sprites/C_Walk1.tpsheet
 - Assets/Sprites/C_Walk2.tpsheet
 - Assets/Sprites/G_Idle.tpsheet
+- Assets/Sprites/G_Walk.tpsheet
 - Assets/Sprites/T_Idle.tpsheet
 - Assets/Sprites/T_Walk.tpsheet
 textureFileNames:
@@ -22,10 +23,12 @@ textureFileNames:
 - Assets/Sprites/C_Walk1.png
 - Assets/Sprites/C_Walk2.png
 - Assets/Sprites/G_Idle.png
+- Assets/Sprites/G_Walk.png
 - Assets/Sprites/T_Idle.png
 - Assets/Sprites/T_Walk.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 
