@@ -130,9 +130,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.0376153}
+  m_Offset: {x: -5.726363, y: 0.008401871}
   serializedVersion: 2
-  m_Size: {x: 1, y: 11.983867}
+  m_Size: {x: 12.452723, y: 19.989079}
 --- !u!1001 &76690623
 Prefab:
   m_ObjectHideFlags: 0
@@ -283,9 +283,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.0376153}
+  m_Offset: {x: 5.7263412, y: 0.030900002}
   serializedVersion: 2
-  m_Size: {x: 1, y: 11.983867}
+  m_Size: {x: 12.4526825, y: 20.034082}
 --- !u!1 &370674096
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,9 +533,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.007211685, y: 1.2864304}
+  m_Offset: {x: 0.020594597, y: -1.2262807}
   serializedVersion: 2
-  m_Size: {x: 15.983629, y: 3.5728717}
+  m_Size: {x: 40.15773, y: 8.598294}
 --- !u!1 &733778824
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74598a550178ed4468114f0ff3589ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsList: []
+  selectionCooldown: 0.08
 --- !u!120 &1183809188
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -890,10 +890,10 @@ LineRenderer:
     endWidth: 0.1
     m_StartColor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190080
     m_EndColor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190080
   m_UseWorldSpace: 1
 --- !u!4 &1183809189
 Transform:
@@ -1156,9 +1156,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.007211685, y: 0}
+  m_Offset: {x: 0.04250717, y: 2.9614105}
   serializedVersion: 2
-  m_Size: {x: 15.983629, y: 1}
+  m_Size: {x: 40.043594, y: 6.92282}
 --- !u!1 &1734503783
 GameObject:
   m_ObjectHideFlags: 0
