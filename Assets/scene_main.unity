@@ -241,9 +241,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -1.0156317, y: -0.018808365}
+  m_Offset: {x: -2.760788, y: -0.018808365}
   serializedVersion: 2
-  m_Size: {x: 3.0312634, y: 11.946255}
+  m_Size: {x: 1.5159254, y: 11.946255}
 --- !u!1 &497818048
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,9 +360,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.007211685, y: 0}
+  m_Offset: {x: -0.007211685, y: 1.2864304}
   serializedVersion: 2
-  m_Size: {x: 15.983629, y: 1}
+  m_Size: {x: 15.983629, y: 3.5728717}
 --- !u!1 &733778824
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +695,12 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95000010689519884, guid: 27734bb35d383034086a8c2c1bac376b,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 70d26b8ab7238e84b90ab954d8a06a40,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27734bb35d383034086a8c2c1bac376b, type: 2}
   m_IsPrefabParent: 0
@@ -932,8 +938,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 135.23, y: 540}
-  m_SizeDelta: {x: 269.55, y: 1080}
+  m_AnchoredPosition: {x: 810.11, y: 139}
+  m_SizeDelta: {x: 1620, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734503785
 MonoBehaviour:
@@ -947,16 +953,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
+    m_Left: 45
     m_Right: 0
     m_Top: 0
     m_Bottom: 25
   m_ChildAlignment: 6
   m_StartCorner: 2
-  m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
-  m_Spacing: {x: 10, y: 10}
-  m_Constraint: 1
+  m_StartAxis: 1
+  m_CellSize: {x: 60, y: 50}
+  m_Spacing: {x: 90, y: 10}
+  m_Constraint: 2
   m_ConstraintCount: 4
 --- !u!1001 &2007374339
 Prefab:
