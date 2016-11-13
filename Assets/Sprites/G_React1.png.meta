@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 12a09efb703538d4197df597719a4e86
+timeCreated: 1479066096
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: G_R00
+    21300002: G_R01
+    21300004: G_R02
+    21300006: G_R03
+    21300008: G_R04
+    21300010: G_R05
+    21300012: G_R06
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: G_R00
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 913
+        width: 590
+        height: 481
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5010395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_R01
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 843
+        width: 702
+        height: 551
+      alignment: 9
+      pivot: {x: 0.4985755, y: 0.49183303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_R02
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 211
+        width: 715
+        height: 572
+      alignment: 9
+      pivot: {x: 0.4965035, y: 0.49475524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_R03
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 195
+        width: 737
+        height: 588
+      alignment: 9
+      pivot: {x: 0.5074627, y: 0.4931973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_R04
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 785
+        width: 744
+        height: 619
+      alignment: 9
+      pivot: {x: 0.5020161, y: 0.48303714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_R05
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1406
+        width: 793
+        height: 641
+      alignment: 9
+      pivot: {x: 0.50126106, y: 0.49141964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_R06
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1396
+        width: 781
+        height: 651
+      alignment: 9
+      pivot: {x: 0.49615878, y: 0.50076807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
