@@ -17,11 +17,13 @@ public enum NucleoType
 {
     Ademine,
     Cytosine,
-    Guanine,
     Thymine
 }
 
 public abstract class Nucleo : MonoBehaviour {
+
+    protected const float kMaxWalkTime = 2f;
+    protected const float kMaxStopTime = 2f;
 
     [SerializeField]
     public NucleoType _nucleoType;
@@ -29,8 +31,7 @@ public abstract class Nucleo : MonoBehaviour {
     [SerializeField]
     protected float baseWalkSpeed;
 
-    [SerializeField]
-    protected Direction[] possibleDirections;
+    protected Animator animator;
 
     protected float stopTime;
     protected float walkTime;
@@ -42,6 +43,11 @@ public abstract class Nucleo : MonoBehaviour {
     public NucleoType nucleoType { get { return nucleoType; } }
 
     protected abstract void ProcessMovement(float interval);
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {

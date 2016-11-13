@@ -13,9 +13,11 @@ public class Adenine : Nucleo {
         {
             if (!walking)
             {
-                walkTime = 2f;
-                currentDirection = possibleDirections[Random.Range(0, possibleDirections.Length)];
+                walkTime = kMaxWalkTime;
+                currentDirection = (Direction)Random.Range(0, 8);
                 walkVector = DirectionToVector(currentDirection);
+                walking = true;
+                animator.SetBool("isWalking", true);
             }
             else
             {
@@ -27,7 +29,8 @@ public class Adenine : Nucleo {
             if (walkTime <= 0f)
             {
                 walking = false;
-                stopTime = 2f;
+                stopTime = kMaxStopTime;
+                animator.SetBool("isWalking", false);
             }
         }
     }
