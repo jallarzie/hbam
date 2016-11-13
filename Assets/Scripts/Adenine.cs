@@ -28,7 +28,7 @@ public class Adenine : Nucleo {
             else
             {
                 walkTime -= interval;
-                if (Physics2D.Raycast(transform.position, walkVector, 1f).collider == null)
+                if (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider == null)
                 {
                     transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval);
                 }

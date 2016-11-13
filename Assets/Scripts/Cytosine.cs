@@ -38,8 +38,11 @@ public class Cytosine : Nucleo {
             else
             {
                 walkTime -= interval;
-                position += (Vector3)walkVector * interval * baseWalkSpeed;
-                transform.position = position + new Vector3(walkVector.y, -walkVector.x, 0f) * Mathf.Sin((kMaxWalkTime - walkTime) * sineFrequency) * sineMagnitude;
+                if (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider == null)
+                {
+                    position += (Vector3)walkVector * interval * baseWalkSpeed;
+                    transform.position = position + new Vector3(walkVector.y, -walkVector.x, 0f) * Mathf.Sin((kMaxWalkTime - walkTime) * sineFrequency) * sineMagnitude;
+                }
             }
 
             walking = walkTime > 0f;

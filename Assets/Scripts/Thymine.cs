@@ -28,7 +28,10 @@ public class Thymine : Nucleo {
             else
             {
                 walkTime -= interval;
-                transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval);
+                if (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider == null)
+                {
+                    transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval);
+                }
             }
 
             walking = walkTime > 0f;
