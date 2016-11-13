@@ -118,13 +118,17 @@ public class LinesIntersect : MonoBehaviour {
 
     private void Select(int indexVector)
     {
+        Debug.Log("Points count before cull: " + pointsList.Count);
+        Debug.Log("Index to cull: " + indexVector);
         //Making Polygon for colliders
-        List<Vector2> vectorArray = new List<Vector2>();
-        for (int i = 0; i < pointsList.Count-1; i++){
-            if (i > indexVector) {
-                vectorArray.Add((Vector2)pointsList [i]);
-            }
-        }
+        pointsList.RemoveRange(0, indexVector + 1);
+
+        pointsList.Add(pointsList [0]);
+
+        Debug.Log("Points count: " + pointsList.Count);
+
+        line.SetVertexCount (pointsList.Count);
+        line.SetPositions(pointsList.ToArray());
 
         int nucleoCount = BoardController.instance.nucleoCount;
         List<Nucleo> selectedNucleos = new List<Nucleo>();
@@ -132,7 +136,7 @@ public class LinesIntersect : MonoBehaviour {
         for (int i = 0; i < nucleoCount; i++)
         {
             Nucleo nucleo = BoardController.instance.GetNucleo(i);
-            if (IsPointInside(nucleo.transform.position, vectorArray))
+            if (IsPointInside(nucleo.transform.position, pointsList))
             {
                 nucleo.Match();
                 selectedNucleos.Add(nucleo);
@@ -150,7 +154,7 @@ public class LinesIntersect : MonoBehaviour {
         }
     }
 
-    private bool IsPointInside(Vector2 position, List<Vector2> points)
+    private bool IsPointInside(Vector2 position, List<Vector3> points)
     {
         int intersections = 0;
         myLine checkLine = new myLine();
@@ -171,14 +175,6 @@ public class LinesIntersect : MonoBehaviour {
                 {
                     intersections++;
                 }
-            }
-
-            borderLine.StartPoint = points[pointsCount - 1];
-            borderLine.StartPoint = points[0];
-
-            if (isLinesIntersect(checkLine, borderLine))
-            {
-                intersections++;
             }
         }
 
