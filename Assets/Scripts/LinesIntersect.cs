@@ -86,23 +86,45 @@ public class LinesIntersect : MonoBehaviour {
 				isMousePressed = false;
 				line.SetColors (Color.red, Color.red);
 
-				//Making Polygon for colliders
-				Vector2[] vectorArray = new Vector2[pointsList.Count-1];
-				for (int i = 0; i < pointsList.Count-1; i++){
-					if (i > indexVector) {
-						vectorArray [i] = (Vector2)pointsList [i];
-					}
-				}
-				PolygonCollider2D polygonCol = gameObject.AddComponent<PolygonCollider2D>();
-				polygonCol.points = vectorArray;
-				polygonCol.isTrigger = true;
-
-				//TODO: Check who's in the collider
-
-				Destroy (polygonCol);
+                StartCoroutine(DoSelect(indexVector));
 			}
 		}
 	}
+
+    private IEnumerator DoSelect(int indexVector)
+    {
+        //Making Polygon for colliders
+        List<Vector2> vectorArray = new List<Vector2>();
+        for (int i = 0; i < pointsList.Count-1; i++){
+            if (i > indexVector) {
+                vectorArray.Add((Vector2)pointsList [i]);
+            }
+        }
+        PolygonCollider2D polygonCol = GetComponent<PolygonCollider2D>();
+        polygonCol.pathCount = 1;
+        polygonCol.SetPath(0, vectorArray.ToArray());
+
+        yield return new WaitForFixedUpdate();
+
+        transform.position = Vector3.zero;
+
+        yield return new WaitForFixedUpdate();
+
+        int nucleoCount = BoardController.instance.nucleoCount;
+        List<Nucleo> selectedNucleos = new List<Nucleo>();
+
+        for (int i = 0; i < nucleoCount; i++)
+        {
+            Debug.Log("Nucleo");
+            Nucleo nucleo = BoardController.instance.GetNucleo(i);
+            if (polygonCol.IsTouching(nucleo.GetComponent<Collider2D>()))
+            {
+                Debug.Log("touches");
+                Destroy(nucleo.gameObject);
+                //selectedNucleos.Add(nucleo);
+            }
+        }
+    }
 
 	//    -----------------------------------    
 	// Following method checks is currentLine(line drawn by last two points) collided with line
