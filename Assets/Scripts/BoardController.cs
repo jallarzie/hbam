@@ -25,12 +25,7 @@ public class BoardController : MonoBehaviour {
         }
     }
 
-    private Nucleo[] _nucleos;
-
-	//TODO Generate Nucleos based on parameters
-	void Start () {
-        _nucleos = FindObjectsOfType<Nucleo>();
-	}
+    private List<Nucleo> _nucleos = new List<Nucleo>();
 
     public int nucleoCount
     {
@@ -40,12 +35,17 @@ public class BoardController : MonoBehaviour {
                 return 0;
             }
 
-            return _nucleos.Length; 
+            return _nucleos.Count; 
         }
     }
 
     public Nucleo GetNucleo(int index)
     {
         return _nucleos[index];
+    }
+
+    public void Register(Nucleo nucleo)
+    {
+        _nucleos.Add(nucleo);
     }
 }
