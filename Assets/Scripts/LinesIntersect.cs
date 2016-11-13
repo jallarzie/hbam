@@ -73,8 +73,7 @@ public class LinesIntersect : MonoBehaviour {
 		mousePos.z = 0;
 
 		if (Physics2D.OverlapPoint (mousePos, boundaryLayer)) {
-			
-		
+			//TODO: Draw on the side if out of bounds
 		}
 		//TODO: TO OPTIMIZE
 		if (!pointsList.Contains (mousePos)) {
