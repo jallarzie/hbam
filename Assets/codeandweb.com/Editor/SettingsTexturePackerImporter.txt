@@ -6,6 +6,7 @@ tpsheetFileNames:
 - Assets/Sprites/A_Idle_WithoutB.tpsheet
 - Assets/Sprites/A_React.tpsheet
 - Assets/Sprites/A_Walk.tpsheet
+- Assets/Sprites/C_Idle.tpsheet
 - Assets/Sprites/T_Idle.tpsheet
 - Assets/Sprites/T_Walk.tpsheet
 textureFileNames:
@@ -14,10 +15,12 @@ textureFileNames:
 - Assets/Sprites/A_Idle_WithoutB.png
 - Assets/Sprites/A_React.png
 - Assets/Sprites/A_Walk.png
+- Assets/Sprites/C_Idle.png
 - Assets/Sprites/T_Idle.png
 - Assets/Sprites/T_Walk.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 

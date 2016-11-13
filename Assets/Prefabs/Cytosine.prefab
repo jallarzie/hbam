@@ -22,7 +22,7 @@ GameObject:
   - 114: {fileID: 114000012476653316}
   - 212: {fileID: 212000012570101558}
   - 95: {fileID: 95000010214225726}
-  - 58: {fileID: 58000013119141766}
+  - 58: {fileID: 58000010211601798}
   m_Layer: 0
   m_Name: Cytosine
   m_TagString: Untagged
@@ -37,13 +37,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011760683750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.58, y: -5.26, z: 0}
+  m_LocalPosition: {x: 2.62, y: -2.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &58000013119141766
+--- !u!58 &58000010211601798
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -52,11 +52,11 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00999999, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 0.4135282
 --- !u!95 &95000010214225726
 Animator:
   serializedVersion: 3
@@ -66,7 +66,7 @@ Animator:
   m_GameObject: {fileID: 1000011760683750}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: a13dad47a10651f49a973f1dcd535795, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -86,9 +86,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kMaxWalkTime: 2
-  kMaxStopTime: 2
-  baseWalkSpeed: 5
-  sineMagnitude: 5
+  kMaxStopTime: 1.1
+  baseWalkSpeed: 1.3
+  sineMagnitude: 1.5
   sineFrequency: 2
 --- !u!212 &212000012570101558
 SpriteRenderer:
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -883558085
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d488923456b0c349969297c89d8c317, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41a831ad91d779d41ba102bce9823b61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
