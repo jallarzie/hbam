@@ -133,13 +133,12 @@ public class LinesIntersect : MonoBehaviour {
             Nucleo nucleo = BoardController.instance.GetNucleo(i);
             if (IsPointInside(nucleo.transform.position, pointsList))
             {
-                nucleo.Match();
                 selectedNucleos.Add(nucleo);
             }
             nucleo.Cooldown(selectionCooldown);
         }
 
-        if (selectedNucleos.Count > 0)
+        if (BoardController.instance.ProcessMatch(selectedNucleos))
         {
             cooldown = selectionCooldown;
         }
