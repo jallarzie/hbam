@@ -5,12 +5,16 @@ using System.Collections.Generic;
 
 public class LinesIntersect : MonoBehaviour {
 
+    [SerializeField]
+    private float selectionCooldown;
+
 	private LineRenderer line;
 	private bool isMousePressed;
-	public List<Vector3> pointsList;
+	private List<Vector3> pointsList;
 	private Vector3 mousePos;
 
 	private int boundaryLayer;
+    private float cooldown = 0f;
 
 	struct myLine
 	{
@@ -29,44 +33,66 @@ public class LinesIntersect : MonoBehaviour {
 	
 	void Update ()
 	{
-		Touch touch = default(Touch);
+        if (cooldown > 0f)
+        {
+            cooldown -= Time.deltaTime;
 
-		if (Input.touchCount != 0) {
-			for (int i = 0; i < Input.touchCount; i++) {
+            if (cooldown <= 0f)
+            {
+                RestartLine();
+            }
+        }
+        else
+        {
+            Touch touch = default(Touch);
 
-				touch = Input.GetTouch (i);
-				switch (touch.phase) {
-				case TouchPhase.Began:
-					RestartLine ();
-					break;
-				case TouchPhase.Ended:
-					isMousePressed = false;
-					break;
-				}
-				if (isMousePressed) {
-					Draw (touch.position);
-				}
-			}
-		}
+            if (Input.touchCount != 0)
+            {
+                for (int i = 0; i < Input.touchCount; i++)
+                {
 
-		if (Input.touchCount == 0) {
-			if (Input.GetMouseButtonDown (0)) {
-				RestartLine();
-			}
-			if (Input.GetMouseButtonUp (0)) {
-				isMousePressed = false;
-			}
-			if (isMousePressed) {
-				Draw (Input.mousePosition);
-			}
-		}
+                    touch = Input.GetTouch(i);
+                    switch (touch.phase)
+                    {
+                        case TouchPhase.Began:
+                            isMousePressed = true;
+                            RestartLine();
+                            break;
+                        case TouchPhase.Ended:
+                            isMousePressed = false;
+                            RestartLine();
+                            break;
+                    }
+                    if (isMousePressed)
+                    {
+                        Draw(touch.position);
+                    }
+                }
+            }
+
+            if (Input.touchCount == 0)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isMousePressed = true;
+                    RestartLine();
+                }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    isMousePressed = false;
+                    RestartLine();
+                }
+                if (isMousePressed)
+                {
+                    Draw(Input.mousePosition);
+                }
+            }
+        }
 	}
 
 	private void RestartLine(){
-		isMousePressed = true;
 		line.SetVertexCount (0);
 		pointsList.Clear();
-		line.SetColors (Color.white, Color.white);
 	}
 
 	private void Draw(Vector3 position){
@@ -76,6 +102,7 @@ public class LinesIntersect : MonoBehaviour {
 		if (Physics2D.OverlapPoint (mousePos, boundaryLayer)) {
 			//TODO: Draw on the side if out of bounds
 		}
+
 		//TODO: TO OPTIMIZE
 		if (!pointsList.Contains (mousePos)) {
 			pointsList.Add (mousePos);
@@ -84,14 +111,12 @@ public class LinesIntersect : MonoBehaviour {
 			int indexVector = 0;
 			if (isLineCollide (out indexVector)) {
 				isMousePressed = false;
-				line.SetColors (Color.red, Color.red);
-
-                StartCoroutine(DoSelect(indexVector));
+                Select(indexVector);
 			}
 		}
 	}
 
-    private IEnumerator DoSelect(int indexVector)
+    private void Select(int indexVector)
     {
         //Making Polygon for colliders
         List<Vector2> vectorArray = new List<Vector2>();
@@ -100,30 +125,64 @@ public class LinesIntersect : MonoBehaviour {
                 vectorArray.Add((Vector2)pointsList [i]);
             }
         }
-        PolygonCollider2D polygonCol = GetComponent<PolygonCollider2D>();
-        polygonCol.pathCount = 1;
-        polygonCol.SetPath(0, vectorArray.ToArray());
-
-        yield return new WaitForFixedUpdate();
-
-        transform.position = Vector3.zero;
-
-        yield return new WaitForFixedUpdate();
 
         int nucleoCount = BoardController.instance.nucleoCount;
         List<Nucleo> selectedNucleos = new List<Nucleo>();
 
         for (int i = 0; i < nucleoCount; i++)
         {
-            Debug.Log("Nucleo");
             Nucleo nucleo = BoardController.instance.GetNucleo(i);
-            if (polygonCol.IsTouching(nucleo.GetComponent<Collider2D>()))
+            if (IsPointInside(nucleo.transform.position, vectorArray))
             {
-                Debug.Log("touches");
-                Destroy(nucleo.gameObject);
-                //selectedNucleos.Add(nucleo);
+                nucleo.Match();
+                selectedNucleos.Add(nucleo);
+            }
+            nucleo.Cooldown(selectionCooldown);
+        }
+
+        if (selectedNucleos.Count > 0)
+        {
+            cooldown = selectionCooldown;
+        }
+        else
+        {
+            RestartLine();
+        }
+    }
+
+    private bool IsPointInside(Vector2 position, List<Vector2> points)
+    {
+        int intersections = 0;
+        myLine checkLine = new myLine();
+        checkLine.StartPoint = position;
+        checkLine.EndPoint = position + Vector2.right * 100f;
+
+        int pointsCount = points.Count;
+
+        myLine borderLine = new myLine();
+
+        if (pointsCount > 1)
+        {
+            for (int i = 1; i < pointsCount; i++)
+            {
+                borderLine.StartPoint = points[i - 1];
+                borderLine.StartPoint = points[i];
+                if (isLinesIntersect(checkLine, borderLine))
+                {
+                    intersections++;
+                }
+            }
+
+            borderLine.StartPoint = points[pointsCount - 1];
+            borderLine.StartPoint = points[0];
+
+            if (isLinesIntersect(checkLine, borderLine))
+            {
+                intersections++;
             }
         }
+
+        return intersections > 0 && intersections % 2 == 0;
     }
 
 	//    -----------------------------------    

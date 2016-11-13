@@ -37,6 +37,7 @@ public abstract class Nucleo : MonoBehaviour {
     protected float stopTime;
     protected float walkTime;
     protected bool walking;
+    protected float cooldown;
 
     protected Direction currentDirection;
     protected Vector2 walkVector;
@@ -57,7 +58,24 @@ public abstract class Nucleo : MonoBehaviour {
 
     private void Update()
     {
-        ProcessMovement(Time.deltaTime);
+        if (cooldown > 0f)
+        {
+            cooldown -= Time.deltaTime; 
+        }
+        else
+        {
+            ProcessMovement(Time.deltaTime);
+        }
+    }
+
+    public void Match()
+    {
+        animator.SetTrigger("reactTrigger");
+    }
+
+    public void Cooldown(float duration)
+    {
+        cooldown = duration;
     }
 
     public static Vector2 DirectionToVector(Direction direction)

@@ -30,7 +30,6 @@ public class BoardController : MonoBehaviour {
 	//TODO Generate Nucleos based on parameters
 	void Start () {
         _nucleos = FindObjectsOfType<Nucleo>();
-        Debug.Log(_nucleos.Length);
 	}
 
     public int nucleoCount
