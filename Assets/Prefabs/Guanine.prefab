@@ -22,7 +22,6 @@ GameObject:
   - 114: {fileID: 114000010437182722}
   - 212: {fileID: 212000011233037852}
   - 95: {fileID: 95000012893767322}
-  - 58: {fileID: 58000012303912066}
   m_Layer: 0
   m_Name: Guanine
   m_TagString: Untagged
@@ -43,20 +42,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &58000012303912066
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013749634132}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5538542
 --- !u!95 &95000012893767322
 Animator:
   serializedVersion: 3

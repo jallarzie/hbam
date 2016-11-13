@@ -22,7 +22,6 @@ GameObject:
   - 114: {fileID: 114000010559581054}
   - 212: {fileID: 212000013699801716}
   - 95: {fileID: 95000013854671602}
-  - 61: {fileID: 61000013773874752}
   m_Layer: 0
   m_Name: Thymine
   m_TagString: Untagged
@@ -43,20 +42,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &61000013773874752
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010834393274}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.01575613, y: 0.070902586}
-  serializedVersion: 2
-  m_Size: {x: 0.7638588, y: 0.62930596}
 --- !u!95 &95000013854671602
 Animator:
   serializedVersion: 3
