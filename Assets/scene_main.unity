@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74598a550178ed4468114f0ff3589ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionCooldown: 0.08
+  selectionCooldown: 1.7
 --- !u!120 &1183809188
 LineRenderer:
   m_ObjectHideFlags: 0
