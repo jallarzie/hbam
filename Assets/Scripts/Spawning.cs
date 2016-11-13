@@ -20,8 +20,8 @@ public class Spawning : MonoBehaviour {
 		GameObject temp;
 
 		for (int i = 0; i < spawnPoints.Length; i++) {
-			if (i < 4) {
-				temp = Instantiate (getPrefab ((NucleoType)i));
+			if (i < 8) {
+                temp = Instantiate (getPrefab ((NucleoType)(i % 4)));
 			} else {
 				temp = Instantiate (getPrefab ((NucleoType)Random.Range (0, 4)));
 			}

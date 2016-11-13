@@ -25,7 +25,7 @@ public class Guanine : Nucleo {
         {
             Nucleo nucleo = BoardController.instance.GetNucleo(i);
 
-            if (nucleo != this)
+            if (nucleo.nucleoType != nucleoType)
             {
                 float nucleoDistance = Vector3.Distance(nucleo.transform.position, transform.position);
 
