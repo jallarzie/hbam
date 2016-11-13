@@ -182,7 +182,7 @@ public class LinesIntersect : MonoBehaviour {
             }
         }
 
-        return intersections > 0 && intersections % 2 == 0;
+        return intersections % 2 != 0;
     }
 
 	//    -----------------------------------    
