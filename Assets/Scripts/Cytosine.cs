@@ -31,6 +31,12 @@ public class Cytosine : Nucleo {
                 currentDirection = (Direction)Random.Range(0, 8);
                 walkVector = DirectionToVector(currentDirection);
 
+                while (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider != null)
+                {
+                    currentDirection = (Direction)Random.Range(0, 8);
+                    walkVector = DirectionToVector(currentDirection);
+                }
+
                 position = transform.position;
 
                 animator.SetBool("isWalking", true);
@@ -38,10 +44,17 @@ public class Cytosine : Nucleo {
             else
             {
                 walkTime -= interval;
-                if (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider == null)
+
+                position += (Vector3)walkVector * interval * baseWalkSpeed;
+                Vector3 nextPosition = position + new Vector3(walkVector.y, -walkVector.x, 0f) * Mathf.Sin((kMaxWalkTime - walkTime) * sineFrequency) * sineMagnitude;
+
+                if (Physics2D.Raycast(transform.position, (nextPosition - transform.position).normalized, 1f, LayerMask.GetMask("Boundaries")).collider == null)
                 {
-                    position += (Vector3)walkVector * interval * baseWalkSpeed;
-                    transform.position = position + new Vector3(walkVector.y, -walkVector.x, 0f) * Mathf.Sin((kMaxWalkTime - walkTime) * sineFrequency) * sineMagnitude;
+                    transform.position = nextPosition;
+                }
+                else
+                {
+                    walkTime = 0f;
                 }
             }
 

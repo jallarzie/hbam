@@ -22,6 +22,13 @@ public class Adenine : Nucleo {
                 walkTime = kMaxWalkTime;
                 currentDirection = (Direction)Random.Range(0, 8);
                 walkVector = DirectionToVector(currentDirection);
+
+                while (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider != null)
+                {
+                    currentDirection = (Direction)Random.Range(0, 8);
+                    walkVector = DirectionToVector(currentDirection);
+                }
+
                 walking = true;
                 animator.SetBool("isWalking", true);
             }

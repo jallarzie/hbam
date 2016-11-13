@@ -23,6 +23,12 @@ public class Thymine : Nucleo {
                 currentDirection = (Direction)(Random.Range(0, 4) * 2);
                 walkVector = DirectionToVector(currentDirection);
 
+                while (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider != null)
+                {
+                    currentDirection = (Direction)(Random.Range(0, 4) * 2);
+                    walkVector = DirectionToVector(currentDirection);
+                }
+
                 animator.SetBool("isWalking", true);
             }
             else
