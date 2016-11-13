@@ -26,6 +26,7 @@ public class Spawning : MonoBehaviour {
 				temp = Instantiate (getPrefab ((NucleoType)Random.Range (0, 4)));
 			}
 			temp.transform.position = spawnPoints [i].transform.position;
+			BoardController.instance.Register (temp.GetComponent<Nucleo>());
 		}
 	}
 	
