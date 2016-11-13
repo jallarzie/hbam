@@ -44,6 +44,8 @@ public abstract class Nucleo : MonoBehaviour {
 
     public NucleoType nucleoType { get; protected set; }
 
+    public bool followed { get; set; }
+
     protected abstract void ProcessMovement(float interval);
 
     private void Awake()
@@ -54,6 +56,7 @@ public abstract class Nucleo : MonoBehaviour {
     protected virtual void Init()
     {
         animator = GetComponent<Animator>();
+        followed = false;
     }
 
     private void Update()
@@ -66,6 +69,11 @@ public abstract class Nucleo : MonoBehaviour {
         {
             ProcessMovement(Time.deltaTime);
         }
+    }
+
+    private void LateUpdate()
+    {
+        followed = false;
     }
 
     public void Match()

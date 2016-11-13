@@ -25,7 +25,7 @@ public class Guanine : Nucleo {
         {
             Nucleo nucleo = BoardController.instance.GetNucleo(i);
 
-            if (nucleo.nucleoType != nucleoType)
+            if (nucleo.nucleoType != nucleoType && !nucleo.followed)
             {
                 float nucleoDistance = Vector3.Distance(nucleo.transform.position, transform.position);
 
@@ -39,6 +39,7 @@ public class Guanine : Nucleo {
 
         if (closestNucleo != null && closestNucleoDistance > stopDistance)
         {
+            closestNucleo.followed = true;
             if (!walking)
             {
                 walking = true;
