@@ -7,4 +7,12 @@ AnimatorOverrideController:
   m_PrefabInternal: {fileID: 0}
   m_Name: Guanine_Over
   m_Controller: {fileID: 9100000, guid: 8cdb7223b25186841bb44109c7de7171, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0fbb53573455ec749a7b6867d9a8eb57, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 33591143cb7e5e340a6553dc60eff1ee, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 25ad0cbc93bcaad4f9e980dd7373d3af, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 25ad0cbc93bcaad4f9e980dd7373d3af, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 32fdd88145aaf4b4d9aa2e0036a27d53, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 33591143cb7e5e340a6553dc60eff1ee, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 06c42c813d44c8f42a5a916df594b6ec, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 06c42c813d44c8f42a5a916df594b6ec, type: 2}
