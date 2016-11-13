@@ -15,9 +15,10 @@ public enum Direction
 
 public enum NucleoType
 {
-    Ademine,
+    Adenine,
+    Thymine,
     Cytosine,
-    Thymine
+    Guanine
 }
 
 public abstract class Nucleo : MonoBehaviour {
@@ -27,9 +28,6 @@ public abstract class Nucleo : MonoBehaviour {
 
     [SerializeField]
     protected float kMaxStopTime = 2f;
-
-    [SerializeField]
-    public NucleoType _nucleoType;
 
     [SerializeField]
     protected float baseWalkSpeed;
@@ -43,11 +41,16 @@ public abstract class Nucleo : MonoBehaviour {
     protected Direction currentDirection;
     protected Vector2 walkVector;
 
-    public NucleoType nucleoType { get { return nucleoType; } }
+    public NucleoType nucleoType { get; protected set; }
 
     protected abstract void ProcessMovement(float interval);
 
     private void Awake()
+    {
+        Init();
+    }
+
+    protected virtual void Init()
     {
         animator = GetComponent<Animator>();
     }

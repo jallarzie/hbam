@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Guanine : Nucleo {
 
+    protected override void Init()
+    {
+        base.Init();
+        nucleoType = NucleoType.Guanine;
+    }
+
     [SerializeField]
     private float followDistance;
     [SerializeField]
@@ -33,7 +39,17 @@ public class Guanine : Nucleo {
 
         if (closestNucleo != null && closestNucleoDistance > stopDistance)
         {
+            if (!walking)
+            {
+                walking = true;
+                animator.SetBool("isWalking", true);
+            }
             transform.position = transform.position + (Vector3)((closestNucleo.transform.position - transform.position).normalized * baseWalkSpeed * interval);
+        }
+        else if (walking)
+        {
+            walking = false;
+            animator.SetBool("isWalking", false);
         }
     }
 }

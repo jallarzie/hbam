@@ -21,6 +21,7 @@ public class LinesIntersect : MonoBehaviour {
 	void Awake() {
 		line = GetComponent<LineRenderer>();
 		line.SetVertexCount (0);  
+        line.sortingLayerName = "Line";
 		isMousePressed = false;
 		pointsList = new List<Vector3> ();
 		boundaryLayer = LayerMask.NameToLayer ("Boundaries");

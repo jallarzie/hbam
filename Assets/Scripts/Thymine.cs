@@ -2,6 +2,12 @@
 using System.Collections;
 
 public class Thymine : Nucleo {
+
+    protected override void Init()
+    {
+        base.Init();
+        nucleoType = NucleoType.Thymine;
+    }
     
     protected override void ProcessMovement(float interval)
     {
@@ -16,6 +22,8 @@ public class Thymine : Nucleo {
                 walkTime = kMaxWalkTime;
                 currentDirection = (Direction)(Random.Range(0, 4) * 2);
                 walkVector = DirectionToVector(currentDirection);
+
+                animator.SetBool("isWalking", true);
             }
             else
             {
@@ -28,6 +36,8 @@ public class Thymine : Nucleo {
             {
                 walking = false;
                 stopTime = kMaxStopTime;
+
+                animator.SetBool("isWalking", false);
             }
         }
     }

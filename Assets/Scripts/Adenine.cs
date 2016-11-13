@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Adenine : Nucleo {
 
+    protected override void Init()
+    {
+        base.Init();
+        nucleoType = NucleoType.Adenine;
+    }
+
     protected override void ProcessMovement(float interval)
     {
         if (stopTime > 0f)
@@ -22,7 +28,10 @@ public class Adenine : Nucleo {
             else
             {
                 walkTime -= interval;
-                transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval);
+                if (Physics2D.Raycast(transform.position, walkVector, 1f).collider == null)
+                {
+                    transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval);
+                }
             }
 
             walking = walkTime > 0f;

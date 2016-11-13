@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Cytosine : Nucleo {
 
+    protected override void Init()
+    {
+        base.Init();
+        nucleoType = NucleoType.Cytosine;
+    }
+
     private Vector3 position;
 
     [SerializeField]
@@ -26,6 +32,8 @@ public class Cytosine : Nucleo {
                 walkVector = DirectionToVector(currentDirection);
 
                 position = transform.position;
+
+                animator.SetBool("isWalking", true);
             }
             else
             {
@@ -39,6 +47,7 @@ public class Cytosine : Nucleo {
             {
                 walking = false;
                 stopTime = kMaxStopTime;
+                animator.SetBool("isWalking", false);
             }
         }
     }
