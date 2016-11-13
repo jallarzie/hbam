@@ -118,14 +118,9 @@ public class LinesIntersect : MonoBehaviour {
 
     private void Select(int indexVector)
     {
-        Debug.Log("Points count before cull: " + pointsList.Count);
-        Debug.Log("Index to cull: " + indexVector);
         //Making Polygon for colliders
         pointsList.RemoveRange(0, indexVector + 1);
-
-        pointsList.Add(pointsList [0]);
-
-        Debug.Log("Points count: " + pointsList.Count);
+        pointsList[pointsList.Count-1] = pointsList [0];
 
         line.SetVertexCount (pointsList.Count);
         line.SetPositions(pointsList.ToArray());
@@ -170,7 +165,7 @@ public class LinesIntersect : MonoBehaviour {
             for (int i = 1; i < pointsCount; i++)
             {
                 borderLine.StartPoint = points[i - 1];
-                borderLine.StartPoint = points[i];
+                borderLine.EndPoint = points[i];
                 if (isLinesIntersect(checkLine, borderLine))
                 {
                     intersections++;
