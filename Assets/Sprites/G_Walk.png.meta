@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: e15887d9c907e194dbd5130f5bb707b9
+timeCreated: 1479059270
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: G_W00
+    21300002: G_W01
+    21300004: G_W02
+    21300006: G_W03
+    21300008: G_W04
+    21300010: G_W05
+    21300012: G_W06
+    21300014: G_W07
+    21300016: G_W08
+    21300018: G_W09
+    21300020: G_W10
+    21300022: G_W11
+    21300024: G_W12
+    21300026: G_W13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: G_W00
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 601
+        width: 590
+        height: 481
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5010395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W01
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 144
+        width: 662
+        height: 455
+      alignment: 9
+      pivot: {x: 0.51359516, y: 0.52967036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W02
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1565
+        width: 621
+        height: 482
+      alignment: 9
+      pivot: {x: 0.50402576, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W03
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1084
+        width: 649
+        height: 479
+      alignment: 9
+      pivot: {x: 0.5100154, y: 0.49686846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W04
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 1589
+        width: 698
+        height: 458
+      alignment: 9
+      pivot: {x: 0.508596, y: 0.5262009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W05
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1130
+        width: 690
+        height: 457
+      alignment: 9
+      pivot: {x: 0.5072464, y: 0.5273523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W06
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 668
+        width: 686
+        height: 457
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.5273523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W07
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 671
+        width: 687
+        height: 457
+      alignment: 9
+      pivot: {x: 0.5065502, y: 0.5273523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W08
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 211
+        width: 683
+        height: 458
+      alignment: 9
+      pivot: {x: 0.5124451, y: 0.5262009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W09
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1589
+        width: 702
+        height: 458
+      alignment: 9
+      pivot: {x: 0.5071225, y: 0.5262009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1127
+        width: 696
+        height: 460
+      alignment: 9
+      pivot: {x: 0.51005745, y: 0.523913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W11
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 144
+        width: 662
+        height: 455
+      alignment: 9
+      pivot: {x: 0.51359516, y: 0.52967036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W12
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1565
+        width: 621
+        height: 482
+      alignment: 9
+      pivot: {x: 0.50402576, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_W13
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1084
+        width: 649
+        height: 479
+      alignment: 9
+      pivot: {x: 0.5100154, y: 0.49686846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 2fb84261c58aac145ba0521ba085e46d
+timeCreated: 1479056959
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: C_W01
+    21300002: C_W02
+    21300004: C_W03
+    21300006: C_W04
+    21300008: C_W05
+    21300010: C_W06
+    21300012: C_W09
+    21300014: C_W10
+    21300016: C_W11
+    21300018: C_W12
+    21300020: C_W13
+    21300022: C_W14
+    21300024: C_W15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: C_W01
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 445
+        width: 602
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5074751, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W02
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 44
+        width: 614
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5252443, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W03
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 445
+        width: 683
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5366032, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W04
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 846
+        width: 712
+        height: 399
+      alignment: 9
+      pivot: {x: 0.51896065, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W05
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1247
+        width: 723
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5207469, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W06
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1648
+        width: 731
+        height: 399
+      alignment: 9
+      pivot: {x: 0.51367986, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W09
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 44
+        width: 681
+        height: 399
+      alignment: 9
+      pivot: {x: 0.50440526, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W10
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 445
+        width: 610
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5188525, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W11
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 846
+        width: 597
+        height: 399
+      alignment: 9
+      pivot: {x: 0.540201, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W12
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 846
+        width: 606
+        height: 399
+      alignment: 9
+      pivot: {x: 0.52557755, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W13
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 45
+        width: 681
+        height: 398
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5012563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W14
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1247
+        width: 723
+        height: 399
+      alignment: 9
+      pivot: {x: 0.52213, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_W15
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1648
+        width: 730
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5130137, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
