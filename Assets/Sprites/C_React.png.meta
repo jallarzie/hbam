@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: aeee6b2707cd7da458ea3569ff2cbb3a
+timeCreated: 1479066195
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: C_R00
+    21300002: C_R01
+    21300004: C_R02
+    21300006: C_R03
+    21300008: C_R04
+    21300010: C_R05
+    21300012: C_R06
+    21300014: C_R07
+    21300016: C_R08
+    21300018: C_R09
+    21300020: C_R10
+    21300022: C_R11
+    21300024: C_R12
+    21300026: C_R13
+    21300028: C_R14
+    21300030: C_R15
+    21300032: C_R16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: C_R00
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 611
+        width: 568
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R01
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 51
+        width: 633
+        height: 445
+      alignment: 9
+      pivot: {x: 0.52053714, y: 0.49438202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R02
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 11
+        width: 671
+        height: 485
+      alignment: 9
+      pivot: {x: 0.5104322, y: 0.45360824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R03
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 498
+        width: 701
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5042796, y: 0.44726562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R04
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1012
+        width: 709
+        height: 498
+      alignment: 9
+      pivot: {x: 0.50423133, y: 0.46586347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R05
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 351
+        width: 719
+        height: 522
+      alignment: 9
+      pivot: {x: 0.4986092, y: 0.4827586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R06
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1512
+        width: 735
+        height: 535
+      alignment: 9
+      pivot: {x: 0.49183673, y: 0.49345794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R07
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1468
+        width: 782
+        height: 579
+      alignment: 9
+      pivot: {x: 0.48017904, y: 0.49222797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R08
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 875
+        width: 747
+        height: 591
+      alignment: 9
+      pivot: {x: 0.49196786, y: 0.4890017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R09
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1468
+        width: 782
+        height: 579
+      alignment: 9
+      pivot: {x: 0.48017904, y: 0.49222797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 875
+        width: 747
+        height: 591
+      alignment: 9
+      pivot: {x: 0.49196786, y: 0.4890017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R11
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1512
+        width: 735
+        height: 535
+      alignment: 9
+      pivot: {x: 0.49183673, y: 0.49345794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 351
+        width: 719
+        height: 522
+      alignment: 9
+      pivot: {x: 0.4986092, y: 0.4827586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R13
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1012
+        width: 709
+        height: 498
+      alignment: 9
+      pivot: {x: 0.50423133, y: 0.46586347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R14
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 498
+        width: 701
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5042796, y: 0.44726562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R15
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 11
+        width: 671
+        height: 485
+      alignment: 9
+      pivot: {x: 0.5104322, y: 0.45360824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: C_R16
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 51
+        width: 633
+        height: 445
+      alignment: 9
+      pivot: {x: 0.52053714, y: 0.49438202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

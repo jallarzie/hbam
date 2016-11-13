@@ -1,0 +1,101 @@
+fileFormatVersion: 2
+guid: 3971d82d5ad588a4eb4842ffd8ab5d8e
+timeCreated: 1479066656
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: G_R15
+    21300002: G_R16
+    21300004: G_R17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: G_R15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1459
+        width: 737
+        height: 588
+      alignment: 9
+      pivot: {x: 0.5074627, y: 0.4931973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_R16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 885
+        width: 715
+        height: 572
+      alignment: 9
+      pivot: {x: 0.4965035, y: 0.49475524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: G_R17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 332
+        width: 702
+        height: 551
+      alignment: 9
+      pivot: {x: 0.4985755, y: 0.49183303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
