@@ -24,5 +24,13 @@ public class MainMenu : MonoBehaviour {
 
 	public void LoadScene(string loadedScene){
 		SceneManager.LoadScene (loadedScene, LoadSceneMode.Single);
-	}
+    }
+
+    public void Update()
+    {
+        if (Application.platform == RuntimePlatform.WindowsPlayer && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }

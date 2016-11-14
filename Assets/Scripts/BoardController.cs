@@ -67,6 +67,14 @@ public class BoardController : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
     }
 
+    public void Update()
+    {
+        if (Application.platform == RuntimePlatform.WindowsPlayer && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public int nucleoCount
     {
         get { 
