@@ -37,7 +37,7 @@ public class Adenine : Nucleo {
                 walkTime -= interval;
                 if (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider == null)
                 {
-                    transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval);
+                    transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval * speedMultiplier);
                 }
             }
 
@@ -45,7 +45,7 @@ public class Adenine : Nucleo {
             if (walkTime <= 0f)
             {
                 walking = false;
-                stopTime = kMaxStopTime;
+                stopTime = kMaxStopTime / speedMultiplier;
                 animator.SetBool("isWalking", false);
             }
         }

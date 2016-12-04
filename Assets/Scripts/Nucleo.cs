@@ -48,6 +48,8 @@ public abstract class Nucleo : MonoBehaviour {
 
     protected abstract void ProcessMovement(float interval);
 
+    public float speedMultiplier { get; set; }
+
     private void Awake()
     {
         Init();

@@ -48,7 +48,7 @@ public class Guanine : Nucleo {
             walkVector = (closestNucleo.transform.position - transform.position).normalized;
             if (Physics2D.Raycast(transform.position, walkVector, 1f, LayerMask.GetMask("Boundaries")).collider == null)
             {
-                transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval);
+                transform.position = transform.position + (Vector3)(walkVector * baseWalkSpeed * interval * speedMultiplier);
             }
         }
         else if (walking)
