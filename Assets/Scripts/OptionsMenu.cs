@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public enum Speed
@@ -19,8 +20,14 @@ public class OptionsMenu : MonoBehaviour {
     [SerializeField]
     private GameObject _settings;
 
-    [SerializeField]
-    private Slider _volume;
+	[SerializeField]
+	private Text _soundOn;
+	[SerializeField]
+	private Text _soundOff;
+	[SerializeField]
+	private Color _soundColorOn;
+	[SerializeField]
+	private Color _soundColorOff;
 
     [SerializeField]
     private Button _speedUp;
@@ -41,12 +48,17 @@ public class OptionsMenu : MonoBehaviour {
     [SerializeField]
     private int _maxAmount;
 
+	[SerializeField]
+	private GameObject splash1;
+	[SerializeField]
+	private GameObject splash2;
+
     private Speed _currentSpeed;
     private int _currentAmount;
+	private bool _currentSound;
 
     void Start ()
     {
-        _volume.value = PlayerPrefs.GetFloat("volume", 1.0f);
         _currentSpeed = (Speed)PlayerPrefs.GetInt("speed", 2);
         _currentAmount = PlayerPrefs.GetInt("amount", _minAmount);
 
@@ -58,12 +70,24 @@ public class OptionsMenu : MonoBehaviour {
 
         _amountDown.interactable = _currentAmount > _minAmount;
         _amountUp.interactable = _currentAmount < _maxAmount;
+
     }
 
-    public void OnVolumeChanged(float value)
+	public void ShowSplash1()
+	{
+		splash1.SetActive(true);
+		_settings.SetActive (false);
+	}
+
+	public void ShowSplash2()
+	{
+		splash1.SetActive(false);
+		splash2.SetActive(true);
+	}
+
+    public void OnVolumeChanged()
     {
-        PlayerPrefs.SetFloat("volume", value);
-        PlayerPrefs.Save();
+        
     }
 
     public void OnSpeedUp()
@@ -124,5 +148,11 @@ public class OptionsMenu : MonoBehaviour {
     {
         _settings.SetActive(true);
         _credits.SetActive(false);
+		splash1.SetActive(false);
+		splash2.SetActive(false);
     }
+
+	public void LoadScene(string loadedScene){
+		SceneManager.LoadScene (loadedScene, LoadSceneMode.Single);
+	}
 }
