@@ -24,7 +24,7 @@ public class LinesIntersect : MonoBehaviour {
 
 	void Awake() {
 		line = GetComponent<LineRenderer>();
-		line.SetVertexCount (0);  
+        line.numPositions = 0;  
         line.sortingLayerName = "Line";
 		isMousePressed = false;
 		pointsList = new List<Vector3> ();
@@ -91,7 +91,7 @@ public class LinesIntersect : MonoBehaviour {
 	}
 
 	private void RestartLine(){
-		line.SetVertexCount (0);
+        line.numPositions = 0;
 		pointsList.Clear();
 	}
 
@@ -106,7 +106,7 @@ public class LinesIntersect : MonoBehaviour {
 		//TODO: TO OPTIMIZE
 		if (!pointsList.Contains (mousePos)) {
 			pointsList.Add (mousePos);
-			line.SetVertexCount (pointsList.Count);
+            line.numPositions = pointsList.Count;
 			line.SetPosition (pointsList.Count - 1, (Vector3)pointsList [pointsList.Count - 1]);
 			int indexVector = 0;
 			if (isLineCollide (out indexVector)) {
@@ -122,7 +122,7 @@ public class LinesIntersect : MonoBehaviour {
         pointsList.RemoveRange(0, indexVector + 1);
         pointsList[pointsList.Count-1] = pointsList [0];
 
-        line.SetVertexCount (pointsList.Count);
+        line.numPositions = pointsList.Count;
         line.SetPositions(pointsList.ToArray());
 
         int nucleoCount = BoardController.instance.nucleoCount;
