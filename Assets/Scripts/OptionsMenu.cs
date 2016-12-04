@@ -61,6 +61,7 @@ public class OptionsMenu : MonoBehaviour {
     {
         _currentSpeed = (Speed)PlayerPrefs.GetInt("speed", 2);
         _currentAmount = PlayerPrefs.GetInt("amount", _minAmount);
+        _currentSound = PlayerPrefs.GetInt("sound", 1) == 1;
 
         _speedText.text = _currentSpeed.ToString();
         _amountText.text = _currentAmount.ToString();
@@ -71,6 +72,8 @@ public class OptionsMenu : MonoBehaviour {
         _amountDown.interactable = _currentAmount > _minAmount;
         _amountUp.interactable = _currentAmount < _maxAmount;
 
+        _soundOn.color = _currentSound ? _soundColorOn : _soundColorOff;
+        _soundOff.color = !_currentSound ? _soundColorOn : _soundColorOff;
     }
 
 	public void ShowSplash1()
@@ -85,9 +88,14 @@ public class OptionsMenu : MonoBehaviour {
 		splash2.SetActive(true);
 	}
 
-    public void OnVolumeChanged()
+    public void OnVolumeChanged(bool value)
     {
-        
+        _currentSound = value;
+        _soundOn.color = _currentSound ? _soundColorOn : _soundColorOff;
+        _soundOff.color = !_currentSound ? _soundColorOn : _soundColorOff;
+
+        PlayerPrefs.SetInt("sound", _currentSound ? 1 : 0);
+        PlayerPrefs.Save();
     }
 
     public void OnSpeedUp()
