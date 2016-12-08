@@ -36,6 +36,8 @@ public class BoardController : MonoBehaviour {
     [SerializeField]
     private Text _endInstructionText;
     [SerializeField]
+    private GameObject _pausePopup;
+    [SerializeField]
     private GameObject _lineController;
     [SerializeField]
     private float _fillTime = 1.5f;
@@ -45,8 +47,10 @@ public class BoardController : MonoBehaviour {
     private AudioClip[] _matchSounds;
     [SerializeField]
     private AudioClip _endSound;
+    [SerializeField]
+    private Toggle _soundToggle;
 
-	private const float _endSoundVolume = 0.3f;
+    private const float _endSoundVolume = 0.3f;
 
     private List<Nucleo> _nucleos = new List<Nucleo>();
     private int currentFillIndex;
@@ -62,6 +66,7 @@ public class BoardController : MonoBehaviour {
         maxFills = _helix.transform.childCount - 2;
         maxMatches = maxFills * 2;
         _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
+        _soundToggle.isOn = PlayerPrefs.GetInt("sound", 1) == 1;
     }
 
     public void Update()
@@ -264,5 +269,14 @@ public class BoardController : MonoBehaviour {
         SceneManager.LoadScene("scene_main", LoadSceneMode.Single);
     }
 
+    public void OnPause(bool pause)
+    {
+        Time.timeScale = pause ? 0.0f : 1.0f;
+        _pausePopup.SetActive(pause);
+    }
 
+    public void OnSoundChange(bool value)
+    {
+        SoundManager.instance.SetSound(value);
+    }
 }

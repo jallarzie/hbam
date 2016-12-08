@@ -53,11 +53,14 @@ public class SoundManager : MonoBehaviour {
 
     public void SetSound(bool value)
     {
-        soundOn = value;
+        if (soundOn != value)
+        {
+            soundOn = value;
 
-        _bgmSource.mute = !soundOn;
+            _bgmSource.mute = !soundOn;
 
-        PlayerPrefs.SetInt("sound", soundOn ? 1 : 0);
-        PlayerPrefs.Save();
+            PlayerPrefs.SetInt("sound", soundOn ? 1 : 0);
+            PlayerPrefs.Save();
+        }
     }
 }
