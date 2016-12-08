@@ -194,7 +194,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Jallarzie/Documents/GitHub/hbam/gnh.keystore
+  AndroidKeystoreName: C:/Users/guyd1/Desktop/Prog Projects/HBAM/hbam/gnh.keystore
   AndroidKeyaliasName: hbam
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
