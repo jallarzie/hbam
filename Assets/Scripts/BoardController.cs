@@ -34,8 +34,6 @@ public class BoardController : MonoBehaviour {
     [SerializeField]
     private Text _endText;
     [SerializeField]
-    private Text _endInstructionText;
-    [SerializeField]
     private GameObject _pausePopup;
     [SerializeField]
     private GameObject _lineController;
@@ -240,33 +238,34 @@ public class BoardController : MonoBehaviour {
                 if (result > 90f)
                 {
                     _endText.text = "YOU MADE A BABY!";
-                    _endInstructionText.text = "Tap/click to try again";
                     SoundManager.instance.PlaySound(_endSound, _endSoundVolume);
                 }
                 else if (result > 60f)
                 {
                     _endText.text = "EXCELLENT!";
-                    _endInstructionText.text = "Tap/click to try again";
                     SoundManager.instance.PlaySound(_endSound, _endSoundVolume);
                 }
                 else if (result > 40f)
                 {
                     _endText.text = "GOOD";
-                    _endInstructionText.text = "Tap/click to try again";
                 }
                 else
                 {
                     _endText.text = "...";
-                    _endInstructionText.text = "Tap/click to try again";
                 }
                 _endPopup.SetActive(true);
             }
         }
     }
 
-    public void OnEndTap()
+    public void OnRetryTap()
     {
         SceneManager.LoadScene("scene_main", LoadSceneMode.Single);
+    }
+
+    public void OnSettingsTap()
+    {
+        SceneManager.LoadScene("scene_settings", LoadSceneMode.Single);
     }
 
     public void OnPause(bool pause)
