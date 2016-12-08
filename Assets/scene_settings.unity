@@ -165,7 +165,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6637035}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865030919}
+        m_MethodName: OnVolumeChanged
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &6637035
@@ -1230,8 +1241,8 @@ MonoBehaviour:
   _settings: {fileID: 1458527484}
   _soundOn: {fileID: 6637035}
   _soundOff: {fileID: 1977209114}
-  _soundColorOn: {r: 0, g: 0, b: 0, a: 0}
-  _soundColorOff: {r: 0, g: 0, b: 0, a: 0}
+  _soundColorOn: {r: 0.078431375, g: 0.5372549, b: 0.56078434, a: 1}
+  _soundColorOff: {r: 0, g: 0, b: 0, a: 1}
   _speedUp: {fileID: 2024280986}
   _speedDown: {fileID: 1105735526}
   _speedText: {fileID: 1930215358}
@@ -2515,7 +2526,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1977209114}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865030919}
+        m_MethodName: OnVolumeChanged
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1977209114
