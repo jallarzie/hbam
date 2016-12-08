@@ -3680,6 +3680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionCooldown: 1.7
+  extrapolationDistance: 1
 --- !u!120 &1183809188
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -5465,7 +5466,6 @@ MonoBehaviour:
   _helix: {fileID: 98238180}
   _endPopup: {fileID: 1986744015}
   _endText: {fileID: 1168484703}
-  _endInstructionText: {fileID: 0}
   _pausePopup: {fileID: 1266549471}
   _lineController: {fileID: 1183809186}
   _fillTime: 1.5

@@ -8,6 +8,9 @@ public class LinesIntersect : MonoBehaviour {
     [SerializeField]
     private float selectionCooldown;
 
+    [SerializeField]
+    private float extrapolationDistance;
+
 	private LineRenderer line;
 	private bool isMousePressed;
 	private List<Vector3> pointsList;
@@ -60,7 +63,7 @@ public class LinesIntersect : MonoBehaviour {
                             break;
                         case TouchPhase.Ended:
                             isMousePressed = false;
-                            RestartLine();
+                            Draw(touch.position);
                             break;
                     }
                     if (isMousePressed)
@@ -80,7 +83,7 @@ public class LinesIntersect : MonoBehaviour {
                 if (Input.GetMouseButtonUp(0))
                 {
                     isMousePressed = false;
-                    RestartLine();
+                    Draw(Input.mousePosition);
                 }
                 if (isMousePressed)
                 {
@@ -99,21 +102,47 @@ public class LinesIntersect : MonoBehaviour {
 		mousePos = Camera.main.ScreenToWorldPoint (position);
 		mousePos.z = 0;
 
-		if (Physics2D.OverlapPoint (mousePos, boundaryLayer)) {
-			//TODO: Draw on the side if out of bounds
-		}
+        if (!isMousePressed)
+        {
+            if (pointsList.Count >= 2)
+            {
+                var lastPoint = pointsList[pointsList.Count - 1];
+                var secondToLastPoint = pointsList[pointsList.Count - 2];
 
-		//TODO: TO OPTIMIZE
-		if (!pointsList.Contains (mousePos)) {
-			pointsList.Add (mousePos);
+                mousePos = lastPoint + (lastPoint - secondToLastPoint).normalized * extrapolationDistance;
+
+                pointsList.Add(mousePos);
+                line.numPositions = pointsList.Count;
+                line.SetPosition(pointsList.Count - 1, (Vector3)pointsList[pointsList.Count - 1]);
+                int indexVector = 0;
+                if (isLineCollide(out indexVector))
+                {
+                    Select(indexVector);
+                }
+                else
+                {
+                    RestartLine();
+                    return;
+                }
+            }
+            else
+            {
+                RestartLine();
+                return;
+            }
+        }
+        else if (!pointsList.Contains(mousePos))
+        {
+            pointsList.Add(mousePos);
             line.numPositions = pointsList.Count;
-			line.SetPosition (pointsList.Count - 1, (Vector3)pointsList [pointsList.Count - 1]);
-			int indexVector = 0;
-			if (isLineCollide (out indexVector)) {
-				isMousePressed = false;
+            line.SetPosition(pointsList.Count - 1, (Vector3)pointsList[pointsList.Count - 1]);
+            int indexVector = 0;
+            if (isLineCollide(out indexVector))
+            {
+                isMousePressed = false;
                 Select(indexVector);
-			}
-		}
+            }
+        }
 	}
 
     private void Select(int indexVector)
