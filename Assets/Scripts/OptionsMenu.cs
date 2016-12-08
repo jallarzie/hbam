@@ -94,8 +94,7 @@ public class OptionsMenu : MonoBehaviour {
         _soundOn.color = _currentSound ? _soundColorOn : _soundColorOff;
         _soundOff.color = !_currentSound ? _soundColorOn : _soundColorOff;
 
-        PlayerPrefs.SetInt("sound", _currentSound ? 1 : 0);
-        PlayerPrefs.Save();
+        SoundManager.instance.SetSound(_currentSound);
     }
 
     public void OnSpeedUp()

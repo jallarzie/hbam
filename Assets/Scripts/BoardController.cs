@@ -55,8 +55,6 @@ public class BoardController : MonoBehaviour {
     private int maxFills;
     private int currentMatches;
 
-    private AudioSource audioSource;
-
     private void Awake()
     {
         currentMatches = 0;
@@ -64,7 +62,6 @@ public class BoardController : MonoBehaviour {
         maxFills = _helix.transform.childCount - 2;
         maxMatches = maxFills * 2;
         _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
-        audioSource = GetComponent<AudioSource>();
     }
 
     public void Update()
@@ -184,7 +181,7 @@ public class BoardController : MonoBehaviour {
                     matchedThymine.Match();
                     currentMatches += 2;
                     _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
-                    audioSource.PlayOneShot(_matchSounds[Random.Range(0, _matchSounds.Length)]);
+                    SoundManager.instance.PlaySound(_matchSounds[Random.Range(0, _matchSounds.Length)]);
                     previousSegment.cg.CrossFadeAlpha(1f, _fillTime, false);
                     previousSegment.at.CrossFadeAlpha(1f, _fillTime, false);
                     return true;
@@ -196,7 +193,7 @@ public class BoardController : MonoBehaviour {
                 matchedGuanine.Match();
                 currentMatches++;
                 _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
-                audioSource.PlayOneShot(_matchSounds[Random.Range(0, _matchSounds.Length)]);
+                SoundManager.instance.PlaySound(_matchSounds[Random.Range(0, _matchSounds.Length)]);
                 previousSegment.cg.CrossFadeAlpha(1f, _fillTime, false);
                 return true;
             }
@@ -207,7 +204,7 @@ public class BoardController : MonoBehaviour {
                 matchedThymine.Match();
                 currentMatches++;
                 _matchPercentDisplay.text = string.Format("{0}%", Mathf.Round((float)currentMatches / (float)maxMatches * 100f));
-                audioSource.PlayOneShot(_matchSounds[Random.Range(0, _matchSounds.Length)]);
+                SoundManager.instance.PlaySound(_matchSounds[Random.Range(0, _matchSounds.Length)]);
                 previousSegment.at.CrossFadeAlpha(1f, _fillTime, false);
                 return true;
             }
@@ -235,18 +232,17 @@ public class BoardController : MonoBehaviour {
                 _nucleos[i].gameObject.SetActive(false);
                 _lineController.SetActive(false);
                 float result = Mathf.Round((float)currentMatches / (float)maxMatches * 100f);
-				audioSource.volume = _endSoundVolume;
                 if (result > 90f)
                 {
                     _endText.text = "YOU MADE A BABY!";
                     _endInstructionText.text = "Tap/click to try again";
-                    audioSource.PlayOneShot(_endSound);
+                    SoundManager.instance.PlaySound(_endSound, _endSoundVolume);
                 }
                 else if (result > 60f)
                 {
                     _endText.text = "EXCELLENT!";
                     _endInstructionText.text = "Tap/click to try again";
-                    audioSource.PlayOneShot(_endSound);
+                    SoundManager.instance.PlaySound(_endSound, _endSoundVolume);
                 }
                 else if (result > 40f)
                 {

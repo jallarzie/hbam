@@ -1295,7 +1295,12 @@ MonoBehaviour:
     type: 2}
   guaninePrefab: {fileID: 1000013749634132, guid: 76838ed1383150240b521ba632c00e4c,
     type: 2}
-  speedMultipliers: []
+  speedMultipliers:
+  - 0.5
+  - 0.75
+  - 1
+  - 1.25
+  - 1.5
 --- !u!4 &370674098
 Transform:
   m_ObjectHideFlags: 0
