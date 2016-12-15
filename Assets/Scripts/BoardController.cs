@@ -266,14 +266,13 @@ public class BoardController : MonoBehaviour {
     public void OnSettingsTap()
     {
         SceneManager.LoadScene("scene_settings", LoadSceneMode.Single);
-		_lineController.SetActive (true);
     }
 
     public void OnPause(bool pause)
     {
         Time.timeScale = pause ? 0.0f : 1.0f;
         _pausePopup.SetActive(pause);
-		_lineController.SetActive (false);
+		_lineController.SetActive (!pause);
     }
 
     public void OnSoundChange(bool value)
