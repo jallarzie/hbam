@@ -93,6 +93,11 @@ public class LinesIntersect : MonoBehaviour {
         }
 	}
 
+	private void OnEnable(){
+		isMousePressed = false;
+		RestartLine ();
+	}
+
 	private void RestartLine(){
         line.numPositions = 0;
 		pointsList.Clear();
